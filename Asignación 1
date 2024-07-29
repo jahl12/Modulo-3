@@ -1,7 +1,5 @@
 // primera asignación
 
-//Task 1
-
 Task 1: Build a function-based console log message generator
 In this exercise, your task is to code a function named consoleStyler, which accepts four parameters:
 
@@ -35,16 +33,6 @@ Finally, console log the message and style variables inside the consoleStyler fu
 
 Hint: Be sure to use backticks (``) when updating your variable styles and not single ('') or double ("") quotes.
 
-// Task 1: Build a function-based console log message generator
-function consoleStyler(color, background, fontSize, txt) {
-    let message = "%c" + txt;
-    let style = `color: ${color};`
-    style += `background: ${background};`
-    style += `font-size: ${fontSize};`
-    console.log(message, style);
-}
-
-//task 2
 
 Task 2: Build another console log message generator.
 Your task is to code another function, and name it celebrateStyler(). The function accepts a single parameter, reason, which should be of string data type.
@@ -69,21 +57,6 @@ Add an else block, with the following code inside of it:
 
 console.log(message, style);
 
-// Task 2: Build another console log message generator
-function celebrateStyler(reason) {
-    const fontStyle = "color: tomato; font-size: 50px";
-    if (reason == "birthday") {
-        console.log(`%cHappy birthday`, fontStyle);
-    }
-    else if (reason == "champions") {
-        console.log(`%cCongrats on the title`, fontStyle)
-    }
-    else {
-        console.log(message, style);
-    }
-}
-
-//task 3
 
 Task 3: Run both the consoleStyler and the celebrateStyler functions
 Invoke the consoleStyler() function, with the following arguments:
@@ -100,11 +73,6 @@ Next, invoke the celebrateStyler() function, with the following argument:
 
 'birthday'
 
-// Task 3: Run both the consoleStyler and the celebrateStyler functions
-consoleStyler('#1d5c63', '#ede6db', '40px', 'Congrats!');
-celebrateStyler('birthday');
-
-//Task 4
 
 Task 4: Insert a congratulatory and custom message
 Code another function, named styleAndCelebrate().
@@ -119,6 +87,35 @@ Next, invoke the new function, using the following arguments:
 '30px'
 'You made it!'
 'champions'
+
+//answer
+
+ // Task 1: Build a function-based console log message generator
+function consoleStyler(color, background, fontSize, txt) {
+    let message = "%c" + txt;
+    let style = `color: ${color};`
+    style += `background: ${background};`
+    style += `font-size: ${fontSize};`
+    console.log(message, style);
+}
+
+// Task 2: Build another console log message generator
+function celebrateStyler(reason) {
+    const fontStyle = "color: tomato; font-size: 50px";
+    if (reason == "birthday") {
+        console.log(`%cHappy birthday`, fontStyle);
+    }
+    else if (reason == "champions") {
+        console.log(`%cCongrats on the title`, fontStyle)
+    }
+    else {
+        console.log(message, style);
+    }
+}
+
+// Task 3: Run both the consoleStyler and the celebrateStyler functions
+consoleStyler('#1d5c63', '#ede6db', '40px', 'Congrats!');
+celebrateStyler('birthday');
 
 // Task 4: Insert a congratulatory and custom message
 function styleAndCelebrate(color, background, fontSize, txt, reason) {
