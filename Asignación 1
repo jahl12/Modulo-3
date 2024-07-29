@@ -121,9 +121,10 @@ Next, invoke the new function, using the following arguments:
 'champions'
 
 // Task 4: Insert a congratulatory and custom message
-function styleAndCelebrate() {
-    consoleStyler('ef7c8e', 'fae8e0', '30px', 'You made it!', 'champions');
-    celebrateStyler('champions');
+function styleAndCelebrate(color, background, fontSize, txt, reason) {
+    consoleStyler(color, background, fontSize, txt);
+    celebrateStyler(reason);
 }
+
 // Call styleAndCelebrate
- styleAndCelebrate();
+styleAndCelebrate ('ef7c8e', 'fae8e0', '30px', 'You made it!', 'champions');
